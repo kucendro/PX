@@ -1,0 +1,24 @@
+UPLOAD COMMAND: arduino-cli upload ./<soubor> -p /dev/ttyACM0 -b arduino:avr:uno
+MONITOR COMMAND: arduino-cli monitor -p /dev/ttyACM0 -b arduino:avr:uno
+
+ARDUINO UNO
+-----------------------------
+
+ATMega328 - jednočipový mikropočítač, který obsahuje procesor, paměť a vstupně-výstupní rozhraní.
+Harvardská architektura v jednom čipu - oddělené paměti pro program a data.
+PAMĚŤ DAT: 2kb - SRAM pro data
+PAMĚŤ PROGRAMU: 32kb - FLASH
+PAMĚŤ DAT: 1kb - EEPROM pro trvalé uložení dat
+
+KRYSTALOVÝ OSCILÁTOR => generuje hodinový signál (takt) 16MHz
+NAPÁJENÍ: 1) USB 5V, 2) NAPÁJECÍ KONEKTOR (souosý) 6-12V
+
+DIGITÁLNÍ VÝVODY:
+------------------------------
+Co znamená digitální? => 0 a 1, LOW a HIGH, vypnuto a zapnuto
+LOW = 0V
+HIGH = 5V
+Všechny vývody jsou obousměrné
+
+NEPOUŽÍVÁME VÝVODY: 0 (RX), 1(TX), 13(vestavěná LED)
+
