@@ -22,3 +22,11 @@ Všechny vývody jsou obousměrné
 
 NEPOUŽÍVÁME VÝVODY: 0 (RX), 1(TX), 13(vestavěná LED)
 
+
+ANALOGOVÉ VÝVODY:
+------------------------------
+A0...A5
+
+NAPĚTÍ <0V, 5v> = <0, 1023>
+NAPŘ. 1V => 1/5 * 1023 = 204,6 ~ 205
+2,5V => 2,5/5 * 1023 = 511,5 ~ 512
