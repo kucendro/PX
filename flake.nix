@@ -21,8 +21,6 @@
 
         arduino-cli = pkgs.arduino-cli;
         drawy = pkgs.drawy;
-        upload-port = "/dev/ttyUSB0";
-        fqbn = "arduino:avr:uno";
       in
       {
         devShells.default = pkgs.mkShell {
@@ -34,6 +32,10 @@
           shellHook = ''
             exec zsh 
           '';
+
+          PORT = "/dev/ttyUSB0";
+          UNO = "arduino:avr:uno:cpu=atmega328old";
+          NANO = "arduino:avr:nano";
         };
       }
     );
