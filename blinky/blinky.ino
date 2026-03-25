@@ -30,6 +30,33 @@ void petka() {
   }
 }
 
+void sestka() {
+  for (int i = 1; i <= 30; i++) {
+    delay(1000 / (2*i));
+    Serial.println(String(i) + "Hz");
+    digitalWrite(Z, HIGH);
+    delay((1000 / i));
+    digitalWrite(Z, LOW);
+    delay((1000 / i));
+  }
+}
+
+void smyckaProSedmicku(int color) {
+ digitalWrite((color == Z ? Z : R), HIGH);
+  for (int i = 0; i < 3; i++) {
+    digitalWrite((color == Z ? R : Z), HIGH);
+    delay((color == Z ? 125 : 400));
+    digitalWrite((color == Z ? R : Z), LOW);
+    delay((color == Z ? 125 : 400));
+  }
+  digitalWrite((color == Z ? Z : R), LOW);
+}
+
+void sedmicka() {
+  smyckaProSedmicku(Z);
+  smyckaProSedmicku(R);
+}
+
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(R, OUTPUT);
@@ -38,5 +65,5 @@ void setup() {
 }
 
 void loop() {
-  petka();
+  sedmicka();
 }
