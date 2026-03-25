@@ -57,6 +57,17 @@ void sedmicka() {
   smyckaProSedmicku(R);
 }
 
+void bettersedmicka(int fc, int sc, int period, int iter) {
+  digitalWrite(fc, HIGH);
+   for (int i = 0; i < iter; i++) {
+     digitalWrite(sc, HIGH);
+     delay(period / 2);
+     digitalWrite(sc, LOW);
+     delay(period / 2);
+   }
+   digitalWrite(fc, LOW); 
+}
+
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(R, OUTPUT);
@@ -65,5 +76,6 @@ void setup() {
 }
 
 void loop() {
-  sedmicka();
+  bettersedmicka(Z, R, 400, 3);
+  bettersedmicka(R, Z, 250, 3);
 }
