@@ -13,7 +13,7 @@ void async() {
   digitalWrite(7, LOW);
   digitalWrite(8, HIGH);
   delay(425);
-  digitalWrite(7, HIGH);\
+  digitalWrite(7, HIGH);
   digitalWrite(8, LOW);
   delay(425);
 }
