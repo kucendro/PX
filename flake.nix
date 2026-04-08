@@ -33,7 +33,7 @@
             exec zsh 
           '';
 
-          PORT = "/dev/ttyUSB0";
+          PORT = "/dev/ttyUSB1";
           UNO = "arduino:avr:uno:cpu=atmega328old";
           NANO = "arduino:avr:nano";
         };
